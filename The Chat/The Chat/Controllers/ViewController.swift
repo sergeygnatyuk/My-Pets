@@ -18,20 +18,16 @@ class ViewController: UIViewController {
         super.viewWillAppear(true)
         print("viewWillAppear")
     }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         print("viewDidAppear")
     }
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         print("viewWillDisappear")
     }
-    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
         print("viewDidDisappear")
     }
 }
-

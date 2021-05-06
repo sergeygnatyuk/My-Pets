@@ -1,0 +1,31 @@
+line_length:
+- 200 # warning
+- 300 # error
+
+disabled_rules:
+- trailing_whitespace
+- colon
+- comma
+- control_statement
+
+opt_in_rules:
+- empty_count
+- missing_docs
+
+excluded:
+- Carthage
+- Pods
+- Source/ExcludedFolder
+- Source/ExcludedFile.swift
+
+file_length:
+  warning: 500
+  error: 600
+  
+type_body_length:
+  warning: 400
+  error: 450
+  
+reporter: xcode
+
+warning_threshold: 15
