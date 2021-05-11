@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		4A860FDC26434B5100F7DDA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A860FDB26434B5100F7DDA2 /* AppDelegate.swift */; };
 		4A860FDE26434B5100F7DDA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A860FDD26434B5100F7DDA2 /* SceneDelegate.swift */; };
-		4A860FE026434B5100F7DDA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A860FDF26434B5100F7DDA2 /* ViewController.swift */; };
 		4A860FE326434B5100F7DDA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A860FE126434B5100F7DDA2 /* Main.storyboard */; };
 		4A860FE526434B5300F7DDA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A860FE426434B5300F7DDA2 /* Assets.xcassets */; };
 		4A860FE826434B5300F7DDA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A860FE626434B5300F7DDA2 /* LaunchScreen.storyboard */; };
+		4A9DD97C2649B3BB00CAA790 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9DD97B2649B3BB00CAA790 /* ProfileViewController.swift */; };
 		5D09A64DFA02B65F75819787 /* Pods_The_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46F5643A6747483ED890724 /* Pods_The_Chat.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +20,11 @@
 		4A860FD826434B5100F7DDA2 /* The Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A860FDB26434B5100F7DDA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A860FDD26434B5100F7DDA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4A860FDF26434B5100F7DDA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4A860FE226434B5100F7DDA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A860FE426434B5300F7DDA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A860FE726434B5300F7DDA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A860FE926434B5300F7DDA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A9DD97B2649B3BB00CAA790 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		63C220CE55F586E7E6868378 /* Pods-The Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Chat.debug.xcconfig"; path = "Target Support Files/Pods-The Chat/Pods-The Chat.debug.xcconfig"; sourceTree = "<group>"; };
 		D44B8062F47A4BD7F09867F5 /* Pods-The Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Chat.release.xcconfig"; path = "Target Support Files/Pods-The Chat/Pods-The Chat.release.xcconfig"; sourceTree = "<group>"; };
 		D46F5643A6747483ED890724 /* Pods_The_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,7 +83,7 @@
 		4AADDD002643538800B3BC13 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4A860FDF26434B5100F7DDA2 /* ViewController.swift */,
+				4A9DD97B2649B3BB00CAA790 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -237,8 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A860FE026434B5100F7DDA2 /* ViewController.swift in Sources */,
 				4A860FDC26434B5100F7DDA2 /* AppDelegate.swift in Sources */,
+				4A9DD97C2649B3BB00CAA790 /* ProfileViewController.swift in Sources */,
 				4A860FDE26434B5100F7DDA2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
