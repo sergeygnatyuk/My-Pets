@@ -23,19 +23,20 @@ class ProfileViewController: UIViewController {
         imageView.isUserInteractionEnabled = true
         imageView.contentMode = .scaleToFill
         imagePicker.delegate = self
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapOnImage(_:)))
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(editImageProfile(_:)))
         imageView.addGestureRecognizer(tapRecognizer)
     }
     
-    @objc func tapOnImage(_ sender: UITapGestureRecognizer) {
+    // MARK: - @objc methods
+    @objc func editImageProfile(_ sender: UITapGestureRecognizer) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let actionPhotos = UIAlertAction(title: "Photo Library", style: .default) { (alertController) in
+        let actionPhotos = UIAlertAction(title: "Photo Library", style: .default) { (_) in
             self.imagePicker.sourceType = .photoLibrary
             self.imagePicker.allowsEditing = true
             
             self.present(self.imagePicker, animated: true, completion: nil)
         }
-        let actionCamera = UIAlertAction(title: "Camera", style: .default) { (alertController) in
+        let actionCamera = UIAlertAction(title: "Camera", style: .default) { (_) in
             if UIImagePickerController.isSourceTypeAvailable(.camera) == true {
                 self.imagePicker.sourceType = .camera
                 self.present(self.imagePicker, animated: true, completion: nil)
