@@ -7,5 +7,6 @@ target 'The Chat' do
 
   # Pods for The Chat
    pod 'SwiftLint'
+   pod 'IQKeyboardManagerSwift'
 
 end

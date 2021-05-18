@@ -141,11 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A860FEC26434B5300F7DDA2 /* Build configuration list for PBXNativeTarget "The Chat" */;
 			buildPhases = (
-				4A0D66CE2644553C00980A5B /* ShellScript */,
 				3A403C71534E9056DDCBFADD /* [CP] Check Pods Manifest.lock */,
+				4A0D66CE2644553C00980A5B /* ShellScript */,
 				4A860FD426434B5100F7DDA2 /* Sources */,
 				4A860FD526434B5100F7DDA2 /* Frameworks */,
 				4A860FD626434B5100F7DDA2 /* Resources */,
+				254D5B3A59DF38EE3C123552 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,6 +203,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		254D5B3A59DF38EE3C123552 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The Chat/Pods-The Chat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The Chat/Pods-The Chat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-The Chat/Pods-The Chat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3A403C71534E9056DDCBFADD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

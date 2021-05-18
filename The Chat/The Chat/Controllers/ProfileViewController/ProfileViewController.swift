@@ -10,21 +10,34 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     // Dependencies
-    var imagePicker = UIImagePickerController()
+    let imagePicker = UIImagePickerController()
+    
     // UI
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var myJobTextField: UITextField!
+    @IBOutlet var editButton: UIButton!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.layer.cornerRadius = min(self.imageView.frame.height, self.imageView.frame.width) / 2.0
-        imageView.clipsToBounds = true
-        imageView.backgroundColor =  #colorLiteral(red: 0.8949689865, green: 0.9089159369, blue: 0.1692225933, alpha: 1)
-        imageView.isUserInteractionEnabled = true
-        imageView.contentMode = .scaleToFill
+        // Поднимаем и опускаем элементы UI когда появляется клавиатура
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+//            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        photoImageView.layer.cornerRadius = min(self.photoImageView.frame.height, self.photoImageView.frame.width) / 2.0
+        photoImageView.clipsToBounds = true
+        photoImageView.backgroundColor =  #colorLiteral(red: 0.8949689865, green: 0.9089159369, blue: 0.1692225933, alpha: 1)
+        photoImageView.isUserInteractionEnabled = true
+        photoImageView.contentMode = .scaleToFill
         imagePicker.delegate = self
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(editImageProfile(_:)))
-        imageView.addGestureRecognizer(tapRecognizer)
+        photoImageView.addGestureRecognizer(tapRecognizer)
+        
+        editButton.layer.cornerRadius = 15
+    }
+    // Скрываем клавиатуру при тапе по view
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     // MARK: - @objc methods
@@ -50,4 +63,18 @@ class ProfileViewController: UIViewController {
         alertController.addAction(actionCancel)
         present(alertController, animated: true, completion: nil)
     }
+    
+//    @objc func keyboardWillShow(notification: NSNotification) {
+//        if ((notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue) != nil {
+//            if self.view.frame.origin.y == 0 {
+//                self.view.frame.origin.y -= nameTextField.minimumFontSize   //keyboardSize.height
+//            }
+//        }
+//    }
+//
+//    @objc func keyboardWillHide(notification: NSNotification) {
+//        if self.view.frame.origin.y != 0 {
+//            self.view.frame.origin.y = 0
+//        }
+//    }
 }
