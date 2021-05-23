@@ -9,11 +9,15 @@ import UIKit
 
 class ProfileView: UIView {
     
+    // Properties
+    let nameTextViewIdentifier = "nameTextView"
+    let descriptionTextViewIdentifier = "descriptionTextView"
+    
     // MARK: - UI
     lazy var photoImageView: UIImageView = {
         let photoImageView = UIImageView()
         photoImageView.clipsToBounds = true
-        photoImageView.backgroundColor =  #colorLiteral(red: 0.8949689865, green: 0.9089159369, blue: 0.1692225933, alpha: 1)
+        photoImageView.backgroundColor =  UIColor().colorFromHex("#E4E72B")
         photoImageView.isUserInteractionEnabled = true
         photoImageView.contentMode = .scaleToFill
         return photoImageView
@@ -23,16 +27,29 @@ class ProfileView: UIView {
         let nameTextView = UITextView()
         nameTextView.textColor = .black
         nameTextView.font = .systemFont(ofSize: 24, weight: .bold)
-        nameTextView.isSelectable = false
+//        nameTextView.isSelectable = false
         nameTextView.isScrollEnabled = false
-        nameTextView.isEditable = false
+//        nameTextView.isEditable = false
         nameTextView.returnKeyType = .done
         nameTextView.backgroundColor = .clear
         nameTextView.textAlignment = .center
         nameTextView.layer.cornerRadius = 8
-        nameTextView.accessibilityIdentifier = "nameTextView"
-        nameTextView.backgroundColor = .cyan
+        nameTextView.accessibilityIdentifier = nameTextViewIdentifier
         return nameTextView
+    }()
+    
+    lazy var descriptionTextView: UITextView = {
+       let descriptionTextView = UITextView()
+        descriptionTextView.textColor = .black
+        descriptionTextView.font = .systemFont(ofSize: 16, weight: .regular)
+        descriptionTextView.isScrollEnabled = false
+        descriptionTextView.returnKeyType = .done
+        descriptionTextView.keyboardDismissMode = .interactive
+//        descriptionTextView.keyboardAppearance = .light
+        descriptionTextView.backgroundColor = .clear
+        descriptionTextView.layer.cornerRadius = 8
+        descriptionTextView.accessibilityIdentifier = descriptionTextViewIdentifier
+        return descriptionTextView
     }()
     
     // MARK: - Constraints
@@ -56,11 +73,25 @@ class ProfileView: UIView {
         ])
     }
     
+    private func setupDescriptionTextViewConstraints() {
+        descriptionTextView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            descriptionTextView.heightAnchor.constraint(equalToConstant: 40),
+            descriptionTextView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 32),
+            descriptionTextView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -32),
+            descriptionTextView.topAnchor.constraint(equalTo: nameTextView.bottomAnchor, constant: 32),
+            
+           // descriptionTextView.bottomAnchor.constraint(greaterThanOrEqualTo: safeAreaLayoutGuide.bottomAnchor, constant: -250)
+        ])
+    }
+    
     // MARK: - Dependencies
     func setupUIElements() {
         addSubview(photoImageView)
         addSubview(nameTextView)
+        addSubview(descriptionTextView)
         setupPhotoImageViewConstraints()
         setupNameTextViewConstraints()
+        setupDescriptionTextViewConstraints()
     }
 }

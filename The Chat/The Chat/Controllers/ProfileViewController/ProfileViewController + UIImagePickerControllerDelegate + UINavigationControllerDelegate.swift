@@ -18,7 +18,9 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
 extension ProfileViewController: UITextViewDelegate {
     private func textViewValidate() {
         guard let name = profileView.nameTextView.text,
-              !profileView.nameTextView.text.isEmpty
+              let description = profileView.descriptionTextView.text,
+              !profileView.nameTextView.text.isEmpty,
+              !profileView.descriptionTextView.text.isEmpty
         else { return }
     }
     // скрываем клавиатуру при нажатии на кнопку Done

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A1B1212265867FF003EB175 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B1211265867FF003EB175 /* SceneDelegate.swift */; };
+		4A1B12B6265ACEB3003EB175 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B12B5265ACEB3003EB175 /* UIColor.swift */; };
 		4A258BF5264DCBD70061D932 /* ProfileViewController + UIImagePickerControllerDelegate + UINavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A258BF4264DCBD70061D932 /* ProfileViewController + UIImagePickerControllerDelegate + UINavigationControllerDelegate.swift */; };
 		4A30052A26584F8200FCC909 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A30052926584F8200FCC909 /* ProfileView.swift */; };
 		4A860FDC26434B5100F7DDA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A860FDB26434B5100F7DDA2 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		4A1B1211265867FF003EB175 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4A1B12B5265ACEB3003EB175 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4A258BF4264DCBD70061D932 /* ProfileViewController + UIImagePickerControllerDelegate + UINavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController + UIImagePickerControllerDelegate + UINavigationControllerDelegate.swift"; sourceTree = "<group>"; };
 		4A30052926584F8200FCC909 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4A860FD826434B5100F7DDA2 /* The Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A1B12B4265ACE6E003EB175 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B12B5265ACEB3003EB175 /* UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4A258BF2264DCBA00061D932 /* ProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		4A860FDA26434B5100F7DDA2 /* The Chat */ = {
 			isa = PBXGroup;
 			children = (
+				4A1B12B4265ACE6E003EB175 /* Extensions */,
 				4A30052826584F4200FCC909 /* Storyboard */,
 				4AADDD022643539400B3BC13 /* View */,
 				4AADDD002643538800B3BC13 /* Controllers */,
@@ -274,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A1B1212265867FF003EB175 /* SceneDelegate.swift in Sources */,
+				4A1B12B6265ACEB3003EB175 /* UIColor.swift in Sources */,
 				4A860FDC26434B5100F7DDA2 /* AppDelegate.swift in Sources */,
 				4A9DD97C2649B3BB00CAA790 /* ProfileViewController.swift in Sources */,
 				4A30052A26584F8200FCC909 /* ProfileView.swift in Sources */,

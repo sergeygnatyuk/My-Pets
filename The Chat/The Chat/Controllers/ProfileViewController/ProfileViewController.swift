@@ -11,7 +11,7 @@ class ProfileViewController: UIViewController {
     
     // MARK: - Properties
     let imagePicker = UIImagePickerController()
-    lazy var profileView: ProfileView = {
+    var profileView: ProfileView = {
         let view = ProfileView()
         return view
     }()
@@ -24,8 +24,6 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // цвет супервью
-        view.backgroundColor = .cyan
         setupView()
     }
     
@@ -39,6 +37,7 @@ class ProfileViewController: UIViewController {
         profileView.setupUIElements()
         profileView.backgroundColor = .white
         profileView.nameTextView.delegate = self
+        profileView.descriptionTextView.delegate = self
         imagePicker.delegate = self
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(editImageProfile(_:)))
@@ -48,13 +47,13 @@ class ProfileViewController: UIViewController {
     // MARK: - @objc methods
     @objc func editImageProfile(_ sender: UITapGestureRecognizer) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let actionPhotos = UIAlertAction(title: "Photo Library", style: .default) { (_) in
+        let actionPhotos = UIAlertAction(title: "Photo Library", style: .default) { _ in
             self.imagePicker.sourceType = .photoLibrary
             self.imagePicker.allowsEditing = true
             
             self.present(self.imagePicker, animated: true, completion: nil)
         }
-        let actionCamera = UIAlertAction(title: "Camera", style: .default) { (_) in
+        let actionCamera = UIAlertAction(title: "Camera", style: .default) { _ in
             if UIImagePickerController.isSourceTypeAvailable(.camera) == true {
                 self.imagePicker.sourceType = .camera
                 self.present(self.imagePicker, animated: true, completion: nil)
