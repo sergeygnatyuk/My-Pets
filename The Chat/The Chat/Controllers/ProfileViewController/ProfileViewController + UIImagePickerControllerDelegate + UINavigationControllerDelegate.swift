@@ -20,10 +20,9 @@ extension ProfileViewController: UITextViewDelegate {
         guard let name = profileView.nameTextView.text,
               let description = profileView.descriptionTextView.text,
               !profileView.nameTextView.text.isEmpty,
-              !profileView.descriptionTextView.text.isEmpty
-        else { return }
+              !profileView.descriptionTextView.text.isEmpty else { return }
     }
-    // скрываем клавиатуру при нажатии на кнопку Done
+    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if(text == "\n") {
             textView.resignFirstResponder()

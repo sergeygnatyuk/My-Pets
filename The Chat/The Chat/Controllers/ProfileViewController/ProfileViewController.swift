@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
     
     // MARK: - Properties
     let imagePicker = UIImagePickerController()
@@ -44,8 +44,7 @@ class ProfileViewController: UIViewController {
         profileView.photoImageView.addGestureRecognizer(tapRecognizer)
     }
     
-    // MARK: - @objc methods
-    @objc func editImageProfile(_ sender: UITapGestureRecognizer) {
+    private func showAlert() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let actionPhotos = UIAlertAction(title: "Photo Library", style: .default) { _ in
             self.imagePicker.sourceType = .photoLibrary
@@ -61,10 +60,16 @@ class ProfileViewController: UIViewController {
                 return
             }
         }
+        
         let actionCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(actionPhotos)
         alertController.addAction(actionCamera)
         alertController.addAction(actionCancel)
         present(alertController, animated: true, completion: nil)
+    }
+    
+    // MARK: - GestureRecognizer
+    @objc func editImageProfile(_ sender: UITapGestureRecognizer) {
+        showAlert()
     }
 }
